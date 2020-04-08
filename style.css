@@ -1,0 +1,316 @@
+/* make sure the other fontent fills the page */
+body{
+    margin:0px;
+}
+/* make sure that outterWrapper spans the whole page 
+give it background color which is only visibile when the window is very narrow
+ */
+#outterWrapper {
+    height:100%;
+    width:100%;
+    background-color:rgb(204, 187, 31);   
+}
+/* make background image height 100vh but keep width flexible so that there's no useless
+space to the side of the screen 
+
+everthing inside it (animate letters, main page) in flex column
+
+background takes up whole div with no repeating
+
+overflow:hidden because there was some intrusive whitespace at the bottom otherwise
+if I made the window really short
+
+set default fonts
+*/
+#background{
+    height:100vh;
+    background-image: url('images/bg.png');
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    padding:2%;
+    overflow:hidden;
+    font-family:'Montserrat', sans-serif;
+}
+
+/* make sure all letter items are in display flex with space-between justification */
+#letterWrapper{
+    display:flex;
+    justify-content: space-between;
+}
+/* dont show animated letters outside the letterwrappers divs
+play the animation slide */
+.letter{
+    overflow:hidden;
+    animation:slide 1s ease-in forwards;
+}
+/* play the expand animation */
+.letter>img{
+    animation:letterExpand 1s ease-in forwards;
+}
+/* slide animation is where the divs containing the animated letters get bigger
+while their right margin gets bigger at the same time. 
+
+combine with the overflow hidden setting and the result is the letters look
+like theyre growing out from the left when you load the page. */
+@keyframes slide {
+    0%{
+        width:0vh;
+        margin-right:16vh;
+    }
+
+    50%{
+        width:8vh;
+        margin-right:8vh;
+    }
+    75%{
+        width:16vh;
+        margin-right:0vh;
+    }
+    87%{
+        width:20vh;
+    }
+    100%{
+        width:16vh;
+        margin-right:0vh;
+    }
+    
+}
+/* this animation is the little embellishement where the letters
+get bigger after the letter divs have finished growing and the 
+letters are fully visible */
+@keyframes letterExpand {
+    0%{
+        width:16vh;
+    }
+
+    70%{
+        width:16vh;
+    }
+    87%{
+        width:20vh;
+    }
+    
+    100%{
+        width:16vh;
+        
+    }
+}
+
+
+/* give the dimentions for all of the letters */
+.lineImg{
+    height:15vh;
+    width:12vh;
+}
+/* make all h1 display block */
+/* h1{
+    display:block;
+} */
+/* give all important text tags that font color */
+h1,h3,.subjects,h4,table{
+    color:darkslateblue;
+}
+/* make h2 the full size of the div that it's in */
+h2{
+    font-size: 100%;
+}
+/* give the less emphasized text tags that font */
+p,li{
+    font-family: 'Nunito Sans', sans-serif;
+}
+/* make sure that contentwrapper divs spans 80% of the page in the center */
+#contentWrapper{
+    width:80%;
+    margin:auto;
+}
+/* display everything in menuDiv (so most content) in flex row wrap with even spacing
+
+nice apple-esque bevel on the div bg colow white
+
+run animatino fade on 0.5s delay
+
+tweak the margin and padding*/
+#menuDiv{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    opacity:0;
+    background-color: rgb(255, 255, 255);
+    animation: fade 1s ease-in forwards;
+    animation-delay:0.5s;
+    margin-top:3%;
+    padding-top:1%;
+    padding-left:3%;
+    padding-right:3%;
+
+}
+/* give all the actual links that dark blue color w the bottom margin */
+#menuDiv a{
+    border-bottom: 1px solid darkslateblue;
+    margin-bottom: 2%;
+
+}
+/* fad animation just makes the menuDiv element fade in gradually */
+@keyframes fade {
+    100%{
+        opacity:1; 
+    }
+}
+/* make the link text white when you hover over it */
+#menuDiv a h2:hover{
+    color:white;
+    
+}
+
+/* give the non-menu content a height of 70 vh
+make overflowing content scroll */
+#contentDiv{
+    height:70vh;
+    overflow:scroll;    
+}
+
+/* even though they're scrolling, I think it's better if you give the 
+pages some padding */
+.page{
+    padding-bottom:30vh;
+}
+
+/* give those header-esque divs on  our mission and academic suppor pages
+a slight bottom padding and a grey bottom border */
+#missionTop,#academyTop{
+    padding-bottom: 1%;
+    border-bottom: 1px solid gray;
+}
+
+/* give the pages a height of auto excpe for course offering */
+#ourMission,#graduationRequirements,#partners{
+    height:auto;
+    
+}
+/* arrange the contents of courseofferings with flexbox
+give it height of 100% */
+#courseOfferings{
+    display:flex;
+    justify-content: space-between;
+    height:100%;  
+}
+/* get rid of all the bullets for every ul */
+#subjectMenu,.classLists{
+    list-style-type: none;
+}
+/* remove default text decoration from the links */
+#subjectMenu li a,#menuDiv a{
+    text-decoration: none;
+}
+/* give all the school subject list items that height */
+#subjectMenu li a{
+    font-size: 4vh;  
+}
+/* if you hover over items on the school subject list, make the background yellow */
+#subjectMenu li a:hover{
+    background-color:rgb(230, 215, 80);
+}
+/* make it so that you can only view the class list for one school subject at a time */
+#classes{
+    overflow: hidden;
+}
+/* each class list fills the div space */
+.class{ 
+    height:100%;
+}
+/* make every other row in the graduation requirements column yellow */
+.yellow{
+    background-color: yellow;
+}
+/* make the table fill the div and squish the cells together */
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+/* make all of the cells text align left and left padding 5%
+in hindsight I'm not sure why I made them all th instead of td
+but it works I guess */
+table tr>th{
+    text-align: left;
+    padding-left: 5%;
+}
+/* partners div text-align center */
+#partners{
+    text-align: center;
+}
+
+/* so before on the class listings page, you could only 
+view one subjects worth of classes at a time as each .page
+had a height of 100% and display overflow hidden.
+unfortunately that causes visibility problems for long 
+lists if the screen gets below 600px in height. 
+
+I changed it to scroll so you could view the whole list.
+
+when I did this, different pages started bleeding into each other
+so I set their height to auto.
+
+overall it doesn't look as nice but retains the overall functionality */
+@media screen and (max-height:600px){
+    .class{
+        height:auto;
+    }
+    #classes {
+        overflow:scroll;
+    }
+}
+
+/* when the screen gets narrower, let the content take up more space
+right the menu items a right margin so that they don't get too scrunched together */
+@media screen and (max-width:1300px){
+    
+    #contentWrapper {
+        width:90%;
+    }
+    #menuDiv a{
+        margin-right: 3%;
+    }
+    #menuDiv{
+        margin-top: 1%;
+    }
+}
+/* screen gets narrower still change the size of the animated letters
+and giv the content even more of the page */
+@media screen and (max-width:1200px){
+    .lineImg{
+        height:10vh;
+        width:1vw;
+    }
+    #contentWrapper {
+        width:95%;
+    }
+}
+/* further tweaking of animated letters */
+@media screen and (max-width:800px){
+    .lineImg{
+        width:2vw;
+    }
+}
+/* if the screen is really really narrow then treak the  
+class listings page to have new borders and padding for increased legibility
+
+also tweak the size of the animated letters one more time */
+@media screen and (max-width:600px){
+    .lineImg{
+        height:5vh;
+        width:.5vw;
+    }
+    #subjectMenu li{
+        border-bottom: 1px solid darkslateblue;
+        border-right:1px solid darkslateblue;
+        padding-bottom:5%;
+    }
+    .class{
+        padding-left:3%;
+    }
+   
+}

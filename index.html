@@ -1,0 +1,300 @@
+<!-- comments refer to the line below -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- link the stylesheets and fonts -->
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <title>COURSES AND REQUIREMENTS</title>
+    </head>
+    
+    <body>
+        <!-- container for everything -->
+        <div id="outterWrapper">
+            <!-- container for background image -->
+            <div id= "background">
+                <!-- container for the animated letters -->
+                <div id="letterWrapper">
+                    <!-- the animated letters placed in their own divs -->
+                    <div id="s1" class="letter s">
+                        <img src="./images/s.png" class="lineImg" alt = "s">
+                    </div>
+                    <div id="p1" class="letter">
+                        <img src="./images/p.png" class="lineImg" alt = "p">
+                    </div>
+                    <div id="p2" class="letter">
+                        <img src="./images/p.png" class="lineImg" alt = "p">
+                    </div>
+                    <div id="s2" class="letter s">
+                        <img src="./images/s.png" class="lineImg" alt = "s">
+                    </div>
+                </div>
+                <!-- div for all content aside from the bg and the animated letters -->
+                <div id="contentWrapper">
+                    <!-- originally intended as a div for the menu buttons.
+                    I ended up including in the other content because I thought it would 
+                    make it easier for linking though I probbly could've put the other
+                    stuff in a different div and used target="thatdiv" however at this point 
+                    I'd have to radically restructure my css -->
+                    <div id="menuDiv">
+                        <!-- the menu links themselves as h2 -->
+                        <a href="#ourMission">
+                            <h2>OUR MISSION</h2>
+                        </a>
+                        <a href="#courseOfferings">
+                            <h2>COURSE OFFERINGS</h2>
+                        </a>
+                        <a href="#academicSupport">
+                            <h2>ACADEMIC SUPPORT</h2>
+                        </a>
+                        <a href="#graduationRequirements">
+                            <h2>GRADUATION REQUIREMENTS</h2>
+                        </a>
+                        <a href="#partners">
+                            <h2>PARTNERS</h2>
+                        </a>
+                        <!-- div for all content in content wrapper that isn't the menu buttons -->
+                        <div id="contentDiv">
+                            <!-- div for page titled Our Mission -->
+                            <div class="page" id="ourMission">
+                                <!-- header of the mission page -->
+                                <div id="missionTop">
+                                    <h1>MISSION</h1>
+                                    <p>SPPS stands on a mission of independant learning. By providing a rigorous curriculum in a caring environment touting small student-to-faculty ratio, students grow up to be independant thinkers. It is our foremost goal to prepare students in every aspect so that they can develop the confidence necessary for success in their next stage of learning.</p>
+                                </div>
+                                <!-- 2 bullet point list of stuff that their mission is about -->
+                                <ul>
+                                    <li>SPPS teachers are experts with hearts. Teachers are passionate about getting to know each and every student. Strong bonds between teachers and students build a vibrant community life and lead to exceptional learning in our classrooms and beyond.</li>
+                                    <li>All students, regardless of their interests or furure pursuits, are learning to develop their written and oral communication abilities for future success as scholars. SPPS incorporates various teaching methods to further develop communication skills so that students are able to think critically and express themselves logically as mature adults.</li>
+                                </ul>
+                            </div>
+                            <!-- div for the course offerings page. This page contains two main elements
+                            an unorder list full of links on the left where each link lists a school subject.
+                            a div on the right that displays all of the classes available on the linked school subject -->
+                            <div class="page" id="courseOfferings">
+                                <!-- ul full of links. once clicked the page will appear on the div to the right -->
+                                <ul id="subjectMenu">
+                                    <li><a href="#languageArts" target="#classes" class="subjects">Language Arts</a></li>
+                                    <li><a href="#mathematics" target="#classes" class="subjects">Mathematics</a></li>
+                                    <li><a href="#socialStudies" target="#classes" class="subjects">Social Studies</a></li>
+                                    <li><a href="#labScience" target="#classes" class="subjects">Lab Science</a></li>
+                                    <li><a href="#foreignLanguage" target="#classes" class="subjects">Foreign Language</a></li>
+                                    <li><a href="#computerTechnology" target="#classes" class="subjects">Computer Technology</a></li>
+                                    <li><a href="#artAndMusic" target="#classes" class="subjects">Art and Music</a></li>
+                                    <li><a href="#electives" target="#classes" class="subjects">Electives</a></li>
+                                </ul>
+                                <!-- here is a div the displays the classes in each subject -->
+                                <div id="classes">
+                                    <!-- for each subject there is a div for the subject -->
+                                    <div id="languageArts" class="class">
+                                        <!-- a big header stating the subject -->
+                                        <h1>Language Arts</h1>
+                                        <!-- smaller headers stating ap or regular level -->
+                                        <h4>Regular Level</h4>
+                                        <!-- and uls with the classes in that level for that subject -->
+                                        <ul class="classLists">
+                                            <li>Literature Survey</li>
+                                            <li>World Literature</li>
+                                            <li>American Liturature</li>
+                                            <li>British Liturature</li>
+                                        </ul>
+                                        <h4>AP Level</h4>
+                                        <ul class="classLists">
+                                            <li>AP English Liturature & Composition</li>
+                                            <li>AP English Language & Composition</li>
+                                            <li>AP Capstone (expected from 2020</li>
+                                        </ul>
+                                    </div>
+                                    <!-- the other classes follow the same structure -->
+                                    <div id="mathematics" class="class">
+                                        <h1>Mathematics</h1>
+                                        <h4>Regular Level</h4>
+                                        <ul class="classLists">
+                                            <li>Algebra I</li>
+                                            <li>Algebra II</li>
+                                            <li>Geometry</li>
+                                            <li>Business Math</li>
+                                            <li>Pre-Calculus</li>
+                                            <li>Calculus</li>
+                                        </ul>
+                                        <h4>AP Level</h4>
+                                        <ul class="classLists">
+                                            <li>AP Calculus BC</li>
+                                            <li>AP Statistics</li>
+                                            <li>Multi Variable Calculus</li>
+                                            <li>Linear Algebra</li>
+                                        </ul>
+                                        
+                                    </div> 
+                                    <div id="socialStudies" class="class">
+                                        <h1>Social Studies</h1>
+                                        <h4>Regular Level</h4>
+                                        <ul class="classLists">
+                                            <li>World History</li>
+                                            <li>U.S. History</li>
+                                            <li>Geography</li>
+                                        </ul>
+                                        <h4>AP Level</h4>
+                                        <ul class="classLists">
+                                            <li>AP Macroeconomics</li>
+                                            <li>AP Microeconomics</li>
+                                            <li>AP U.S. History</li>
+                                            <li>AP World History</li>
+                                            <li>AP Human Geography</li>
+                                            <li>AP U.S. Government & Politics</li>
+                                            <li>AP Psychology</li>
+                                        </ul>
+                                    </div>
+                                    <div id="labScience" class="class">
+                                        <h1>Lab Science</h1>
+                                        <h4>Regular Level</h4>
+                                        <ul class="classLists">
+                                            <li>Biology</li>
+                                            <li>Chemistry</li>
+                                            <li>Physics</li>
+                                        </ul>
+                                        <h4>AP Level</h4>
+                                        <ul class="classLists">
+                                            <li>AP Biology</li>
+                                            <li>AP Chemistry</li>
+                                            <li>AP Physics I</li>
+                                            <li>AP Physics C: Mechanics</li>
+                                            <li>AP Physics C: E&M</li>
+                                            <li>AP Environmental Science</li>
+                                        </ul>
+                                    </div>
+                                    <div id="foreignLanguage" class="class">
+                                        <h1>Foreign Language</h1>
+                                        <h4>Regular Level</h4>
+                                        <ul class="classLists">
+                                            <li>Mandarin I ~ IV</li>
+                                            <li>Spanish I ~ IV</li>
+                                        </ul>
+                                    </div>
+                                    <div id="computerTechnology" class="class">
+                                        <h1>Computer Technology</h1>
+                                        <h4>Regular Level</h4>
+                                        <ul class="classLists">
+                                            <li>Computer Application</li>
+                                            <li>Web Design</li>
+                                            <li>Intro to Computer Science</li>
+                                        </ul>
+                                        <h4>AP Level</h4>
+                                        <ul class="classLists">
+                                            <li>AP Computer Science A</li>
+                                        </ul>
+                                    </div>
+                                    <div id="artAndMusic" class="class">
+                                        <h1>Art and Music</h1>
+                                        <h4>Regular Level</h4>
+                                        <ul class="classLists">
+                                            <li>Art I ~ II</li>
+                                            <li>Art Appreciation and Practice</li>
+                                        </ul>
+                                        <h4>AP Level</h4>
+                                        <ul class="classLists">
+                                            <li>AP Studio Art: 2D</li>
+                                            <li>AP Studio Art: 3D</li>
+                                            <li>AP Studio Art: Drawing</li>
+                                        </ul>
+                                    </div>
+                                    <div id="electives" class="class">
+                                        <h1>Electives</h1>
+                                            <ul class="classLists">
+                                                <li>Critical Thinking</li>
+                                                <li>Speech and Debate</li>
+                                                <li>Language Theory and Practicum</li>
+                                                <li>Health</li>
+                                                <li>Physical Education</li>
+                                                <li>Sports Physiology</li>    
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- academic support page follows roughly the same structure as the "our mission"
+                            page except the li items also contain small headers -->
+                            <div class="page" id="academicSupport">
+                                <div id="academyTop">
+                                    <h1>Academic Support</h1>
+                                    <p>All students benefit from academic resources that aim to further develop their essential academic skills.These programs invariably improve students' confidence when approaching writing assignments, revamping math skills and/or receiving extra help on particular subjects. With guidance from academic advisors, students fully utilize such resources to best address their academic goals and aspirations.</p>
+                                </div>
+                                <ol>
+                                    <li><h4>Writing Center</h4>Students can work with an English teacher or student volunteer in this 1:1 peer tutoring environment to receive assistance in all stages of the writing process, regardless of subject matter. Ultimately the writing center helps students become more effective and critical writers</li>
+                                    <li><h4>Math Lab</h4>In order to create a conductive ans supportive learning environment in our challenging math curriculum, the Math Lab is available any time during the school day.<br/> A student can refine his/her math skills and thus extend any or all concepts learned in class through a 1:1 tutoring session.</li>
+                                    <li><h4>Peer Tutoring</h4>SPPS peer tutoring is coordinated and run by student members of the national honors society with the purpose of helping peers through various academic needs. Through a systematic matching system, a student can receive one-on-one assistance on a particular subject in a small group setting, which promotes academic understanding and social development.</li>
+                                </ol>
+                            </div>
+                            <!-- div for graduation requirements page -->
+                            <div class="page" id="graduationRequirements">
+                                <!-- div for the intro text and headers -->
+                                <div id="graduationTop">
+                                    <h1>Graduation Requirements</h1>
+                                    <p>In order to receive an American High School Diploma from Saint Paul Preperatory School, a student must satisfy academic requirements throughout four years. Sereis of courses are aimed to prepare students to be successful in their tertiary education.</p>
+                                </div>
+                                <!-- here I made a table with school subjects and the ammount of years that you 
+                                need to take the in order to graduate. every other row has a yellow background -->
+                                <table>
+                                    <tr>
+                                        <th>Language Arts(English)</th>
+                                        <th>4 years</th>
+                                    </tr>
+                                    <tr class="yellow">
+                                        <th>Mathematics</th>
+                                        <th>4 years</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Social Studies</th>
+                                        <th>3 years</th>
+                                    </tr>
+                                    <tr class="yellow">
+                                        <th>Lab Science</th>
+                                        <th>3 Years</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Foreign Language</th>
+                                        <th>2 years</th>
+                                    </tr>
+                                    <tr class="yellow">
+                                        <th>Physical Education</th>
+                                        <th>1 year</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Fine Art</th>
+                                        <th>1 year</th>
+                                    </tr>
+                                    <tr class="yellow">
+                                        <th>Health</th>
+                                        <th>0.5 year</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Technology</th>
+                                        <th>1 year</th>
+                                    </tr>
+                                    <tr class="yellow">
+                                        <th>Electives</th>
+                                        <th>4 years</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- div for a page with links to my partners' sites -->
+                            <div class="page" id="partners">
+                                <h1>COLLEGE COUNSELLING</h1>
+                                <h1>PROFILE</h1>
+                                <a href = "./red_thread/index.html"><h1>STUDENT LIFE</h1></a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+</html>
+
